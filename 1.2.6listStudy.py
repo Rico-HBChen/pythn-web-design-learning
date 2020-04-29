@@ -14,8 +14,10 @@ for i in range(len(lst)-1):
         idxlst.append(i+1)
 #判断是否有重复元素，如果有，就删掉
 if idxlst:
+    n = 0
     for i in range(len(idxlst)):
-        lst.remove(lst[idxlst[i]])
+        lst.remove(lst[idxlst[i-n]])
+        n = n + 1
 
 print("删除列表重复元素后如下")
 print(lst)
