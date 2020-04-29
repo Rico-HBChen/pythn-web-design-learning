@@ -12,7 +12,7 @@ idxlst = []
 for i in range(len(lst)-1):
     if lst[i] == lst[i+1]:
         idxlst.append(i+1)
-#判断是否有充分元素，如果有，就删掉
+#判断是否有重复元素，如果有，就删掉
 if idxlst:
     for i in range(len(idxlst)):
         lst.remove(lst[idxlst[i]])
