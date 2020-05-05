@@ -21,5 +21,7 @@ lowmyskills = stlMyskills.lower()
 lskills = lowSkills.split(' ')
 lmyskils = lowmyskills.split(' ')
 #如下为最终判断并输出结果的程序
-result = set(lskills).issuperset(set(lmyskils))
+#result = set(lskills).issuperset(set(lmyskils))
+#下面为习题课后修改答案，上面为原始答案
+result = set(lskills).intersection(set(lmyskils))
 print(result)
