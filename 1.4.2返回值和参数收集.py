@@ -7,12 +7,10 @@ def fb(n):
     显示斐波那契数列前n项，n大于等于3
     '''
     fblst=[0,1]
+ 
     for i in range(n-2):
         fblst.append(fblst[-1]+fblst[-2])
-
-    '''        
-    back = [fblst.append(fblst[-1]+fblst[-2])  for i in range(n-2)]
-    '''
+    #back = [fblst.append(fblst[-1]+fblst[-2]) for i in range(n-2)]
     return fblst
 
 #例2
@@ -32,6 +30,5 @@ def ran_num():
 
 #anser = random.randint(1,100)
 a,b,c =ran_num()
-print(a)
-print(b)
-print(c)
+
+print(fb(5))
