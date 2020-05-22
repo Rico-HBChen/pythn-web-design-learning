@@ -59,4 +59,53 @@ def flrange(start,end,step):
             i = float(Decimal(str(i)) + Decimal(str(step)))
         return arrlist
 
-print(flrange(-1.5,1,-0.1))
+#print(flrange(-1.5,1,-0.1))
+
+'''
+第5题
+'''
+def gravity(g):
+    def weight(m):
+        return m*g
+    return weight
+# gLoc = gravity(9.78046)
+# print(gLoc(2))
+
+'''
+第6题
+'''
+def fac (n):
+    '''
+    fac(n)计算n的阶乘，注意n需要大于0且为正整数
+    '''
+    rst = 1
+    for i in range(1,n+1):
+        rst = rst*i
+    return rst
+
+# print(fac(4))
+
+'''
+第7题
+'''
+# filetype = ('.jpg','.gif','.png')
+# fil = ['a.py', 'b.jpg', 'c.gif', 'd.map', 'e.png', 'f.jpg', 'k.txt', 'f.gif', 'h.png', 'm.docx']
+# #使用列表choseFile存储取出的文件
+# choseFile =[]
+# for i in filetype:
+#     for j in fil:
+#         if i in j:
+#             choseFile.append(j)
+# print(choseFile)
+
+'''
+第8题
+'''
+orangeList = [1, "a", 2, "b", 3, "c", 4, "d"]
+orangeVal = orangeList.copy()
+orangeVal.pop(0)
+newdic= dict()
+for i in range(len(orangeList)):
+    if (i+1)%2 == 1:
+        newdic[orangeList[i]] = orangeVal[i]
+print(newdic)
