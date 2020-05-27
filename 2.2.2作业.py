@@ -22,5 +22,5 @@ class Rectangle:
 rect = Rectangle()
 rect.width = 5
 rect.length =3
-rect.size = 20，30
+rect.size = 20,30
 print(rect.size)
