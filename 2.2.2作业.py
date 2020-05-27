@@ -19,20 +19,8 @@ class Rectangle:
         except TypeError:
             print('size需要输入长和宽，中间用逗号隔开。')
 
-'''
-    def __setattr__(self,name,value):
-        if name == 'size':
-            x,y = 0,0
-            x,y = value
-            assert y
-            self.width,self.length = value
-        else:
-            self.__dict__[name] = value
-'''
-
-
 rect = Rectangle()
 rect.width = 5
 rect.length =3
-rect.size = 20
+rect.size = 20，30
 print(rect.size)
