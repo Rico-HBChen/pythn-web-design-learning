@@ -57,21 +57,21 @@
 # print(list(f))
 
 #迭代器写法
-class d2z:
-    def __init__(self,n):
-        assert n > 0
-        assert type(n) is int
-        self.number = n
-        self.result =[n]
+# class d2z:
+#     def __init__(self,n):
+#         assert n > 0
+#         assert type(n) is int
+#         self.number = n
+#         self.result =[n]
     
-    def __iter__(self):
-        return self
+#     def __iter__(self):
+#         return self
 
-    def __next__(self):
-        while self.number > 0:
-            self.number = self.number -1
-            self.result.append(self.number)
-        return self.result
+#     def __next__(self):
+#         while self.number > 0:
+#             self.number = self.number -1
+#             self.result.append(self.number)
+#         return self.result
 
-exp = d2z(6)
-print(exp.__next__())
+# exp = d2z(6)
+# print(exp.__next__())
