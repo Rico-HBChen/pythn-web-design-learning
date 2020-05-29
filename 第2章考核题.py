@@ -80,21 +80,46 @@
 '''
 第3题，生成名人名言的类
 '''
-import random
+# import random
 
-class notes:
-    '''
-    随机产生一句名人名言，不用传入任何参数。
-    '''
-    def __init__(self):
-        dataSum = ['子曰：学而时习之，不亦说乎',
-    '李白：安能摧眉折腰事权贵，使我不得开心颜','刘禹锡:山不在高,有仙则名;水不在深,有龙则灵']
-        self.val = str(random.sample(dataSum,1))
+# class notes:
+#     '''
+#     随机产生一句名人名言，不用传入任何参数。
+#     '''
+#     def __init__(self):
+#         dataSum = ['子曰：学而时习之，不亦说乎',
+#     '李白：安能摧眉折腰事权贵，使我不得开心颜','刘禹锡:山不在高,有仙则名;水不在深,有龙则灵']
+#         self.val = str(random.sample(dataSum,1))
     
+#     def __str__(self):
+#         return self.val
+#     __repr__ = __str__
+
+# w = notes()
+# print(w)
+
+'''
+第4题，生成物理学家的类
+'''
+
+class Physicist:
+    '''
+    判断是否为物理学家，实例化参数为研究方向的英文名称；
+    输入实例名称，直接返回是否为物理学家的判断。
+    '''
+    def __init__(self,research):
+        self.research = research
+        self.is_physicist = True
+
     def __str__(self):
-        return self.val
+        if 'physics' in self.research:
+            self.is_physicist = True
+            return "是一个物理学家"
+        else:
+            self.is_physicist = False
+            return "不是一个物理学家"
     __repr__ = __str__
 
-w = notes()
-print(w)
-
+rico = Physicist('physics')
+print(rico)
+print(rico.research)
