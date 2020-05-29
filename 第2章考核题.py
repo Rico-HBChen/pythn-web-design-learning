@@ -83,16 +83,18 @@
 import random
 
 class notes:
-    def __str__(self):
+    '''
+    随机产生一句名人名言，不用传入任何参数。
+    '''
+    def __init__(self):
         dataSum = ['子曰：学而时习之，不亦说乎',
     '李白：安能摧眉折腰事权贵，使我不得开心颜','刘禹锡:山不在高,有仙则名;水不在深,有龙则灵']
-        return random.sample(dataSum,1)
+        self.val = str(random.sample(dataSum,1))
     
-    def __repr__(self):
-        dataSum = ['子曰：学而时习之，不亦说乎',
-    '李白：安能摧眉折腰事权贵，使我不得开心颜','刘禹锡:山不在高,有仙则名;水不在深,有龙则灵']
-        return random.sample(dataSum,1)
+    def __str__(self):
+        return self.val
+    __repr__ = __str__
 
-words1 = notes()
-print(words1)
+w = notes()
+print(w)
 
