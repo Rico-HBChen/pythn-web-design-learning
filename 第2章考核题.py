@@ -75,3 +75,24 @@
 
 # exp = d2z(6)
 # print(exp.__next__())
+
+
+'''
+第3题，生成名人名言的类
+'''
+import random
+
+class notes:
+    def __str__(self):
+        dataSum = ['子曰：学而时习之，不亦说乎',
+    '李白：安能摧眉折腰事权贵，使我不得开心颜','刘禹锡:山不在高,有仙则名;水不在深,有龙则灵']
+        return random.sample(dataSum,1)
+    
+    def __repr__(self):
+        dataSum = ['子曰：学而时习之，不亦说乎',
+    '李白：安能摧眉折腰事权贵，使我不得开心颜','刘禹锡:山不在高,有仙则名;水不在深,有龙则灵']
+        return random.sample(dataSum,1)
+
+words1 = notes()
+print(words1)
+
