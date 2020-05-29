@@ -82,7 +82,7 @@
 '''
 # import random
 
-# class notes:
+# class Notes:
 #     '''
 #     随机产生一句名人名言，不用传入任何参数。
 #     '''
@@ -95,7 +95,7 @@
 #         return self.val
 #     __repr__ = __str__
 
-# w = notes()
+# w = Notes()
 # print(w)
 
 '''
@@ -123,3 +123,34 @@ class Physicist:
 rico = Physicist('physics')
 print(rico)
 print(rico.research)
+
+'''
+第5题
+'''
+class Temperature:
+    '''
+    温度转换类，根据所测中间物理量对应温度范围，得到最终温度范围;
+    注意仅仅适用于线性变化情况。
+    stader1为记录温度最小值和最大值的列表；
+    stader2为记录所测物理量对应温度最小值和最大值的列表。
+    例如：
+    温度传感器所测温度范围是0-50摄氏度，对应电压10-2000毫安，
+    要得到该传感器电压对应温度的类，可以用如下方法：
+    senser1 = Temperature([0,50],[10,2000])
+    得到电压1000毫安对应温度值写法：
+    senser1.get_temperature(1000)
+    '''
+    def __init__(self,stander1,stander2):
+        self.stander1 = stander1
+        self.stander2 = stander2
+
+    def get_temperature(self,test_data):
+        tmp_mini = self.stander1[0] #温度范围最小值
+        tmp_max = self.stander1[1] #温度范围最大值
+        testing_mini = self.stander2[0] #测量的物理量最小值
+        testing_max = self.stander2[1] #测量的物理量最大值
+        temperature = tmp_mini + (test_data - testing_mini)*(tmp_max-tmp_mini)/(testing_max-testing_mini)
+        return float("{0:.1f}".format(temperature))
+
+senser1 = Temperature([0,50],[10,2000])
+print(senser1.get_temperature(1000))
