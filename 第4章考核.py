@@ -98,7 +98,7 @@
 import copy
 #以下为求解最短路径
 def findCloestrout(inf,rout,S,U,cloest_rout):
-    key_UtoS = {} #记录u的每个key到D点会通过哪个已经确定的最短路径，用于后面输出最短路线
+    key_UtoS = {} #记录最短路线
     for key in U:
         for key2 in S:
             if key+key2 in rout:
