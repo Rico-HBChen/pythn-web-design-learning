@@ -88,3 +88,54 @@
 # # shuffle(lists)
 # # print(lists)
 # print(merg_sort(lists))
+
+#第6题
+'''
+假设轴线上的三个圆圈从上到下为A、C、G
+左侧两个圆圈由上到下为B、E
+右侧两个圆圈由上到下为D、F
+'''
+import copy
+#以下为求解最短路径
+def findCloestrout(inf,rout,S,U,cloest_rout):
+    key_UtoS = {} #记录u的每个key到D点会通过哪个已经确定的最短路径，用于后面输出最短路线
+    for key in U:
+        for key2 in S:
+            if key+key2 in rout:
+                if rout[key+key2]+S[key2] <= U[key]: #保持存储最小值
+                    U[key] = rout[key+key2]+S[key2]
+                    key_UtoS[key] = key2
+            elif key2+key in rout:
+                if rout[key2+key]+S[key2] <= U[key]:
+                    U[key] = rout[key2+key]+S[key2]
+                    key_UtoS[key] = key2
+            else:
+                continue
+    min_value = inf
+    key_min = None
+    for key in U: #找最小的路径
+        if U[key]<min_value:
+            min_value = U[key]
+            key_min = key
+    del U[key_min]#从未确定的最短路径集合删除可以确定的最短路径
+    S[key_min] = min_value#添加已经确定的最短路径
+    for num in range(len(cloest_rout)):
+        if cloest_rout[num][-1] == key_UtoS[key_min]:
+            temp_list = copy.deepcopy(cloest_rout[num])
+            temp_list.append(key_min)
+            cloest_rout.append(temp_list)
+
+rout = {'AB':1,'AD':1.2,'BC':0.5,'BE':2,'CD':0.3,'CE':1.3,
+        'CF':1.5,'DF':2,'EG':1,'FG':0.9}
+rout_list = [('A','B',1),('A','D',1.2),('B','C',0.5),('B','E',2),
+             ('C','D',0.3),('C','E',1.3),('C','F',1.3),('D','F',2),
+             ('E','G',1),('F','G',0.9)]
+ 
+inf = float('inf')#无穷大
+cloest_rout = [['A']]
+S = {'A':0}  #确定最短路径集合
+U = {'B':inf,'C':inf,'D':inf,'E':inf,'F':inf,'G':inf} #未确定的最短路径集合
+ 
+while(U != {}): #直到未确定最短路径为空，才最终确定完最短路径
+    findCloestrout(inf,rout,S,U,cloest_rout)
+print('起点到终点最短路径里程为：{0}公里，经过的点为{1}。'.format(S.get('G'),cloest_rout[6]))
