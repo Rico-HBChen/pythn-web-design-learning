@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			商品单价<input type="number" name="" id="price" value="50" oninput="total.value=parseInt(price.value)*parseInt(amount.value)" /><br>
+			商品数量<input type="number" name="" id="amount" value="1"  oninput="total.value=parseInt(price.value)*parseInt(amount.value)" /><br>
+			商品总价<output id="total" for="price amount" form="cart">50</output><br>
+			<input type="button" name="" id="" value="立即购买"
+			 onclick="alert('总价:'+document.getElementById('total').innerText)"/>
+		</div>
+	</body>
+</html>

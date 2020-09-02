@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="">
+			<input type="text" name="" id="" value="">
+			<input type="color">
+			<input type="date">
+			<input type="email">
+			<select>
+				<option value ="1">北京</option>
+				<option value ="2">深圳</option>
+			</select>
+			<input type="submit" name="" id="" value="提交" />
+			好<input type="radio"name='things' id="" value=1 />
+			坏<input type="radio"name='things' id="" value=0 />
+		</form>
+	</body>
+</html> -->
+
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB18030">
+<title>输入一个日期，返回星期的数字，例如输入的日期是2016-05-24 输出为 2</title>
+<script language= "JavaScript">
+
+
+
+function calcWeek(dt){
+	var da = (dt.replace(/-/g, "/"))// 把2020-08-15 转换为2020/08/15  
+	var da= new Date(da)//接收的格式da为2020/08/15 
+	var weekday=new Array(7)
+	weekday[0]=7
+	weekday[1]=1
+	weekday[2]=2
+	weekday[3]=3
+	weekday[4]=4
+	weekday[5]=5
+	weekday[6]=6
+	return weekday[da.getDay()]
+}
+</script>
+</head>
+<body>
+   
+</body>
+</html>

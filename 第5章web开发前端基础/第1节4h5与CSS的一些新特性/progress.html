@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<progress max="100" value=90 id="progress"></progress>
+			<input type="button" name="" id="" value="" onclick="start_download()" />
+			<script type="text/javascript">
+				progress = document.getElementById('progress')
+				value = 0
+				step = 0.1
+				function start_download(){
+					setInterval(download,50)
+				}
+				function download(){
+					value += step
+					progress.value = value
+				}
+			</script>
+		</div>
+	</body>
+</html>
