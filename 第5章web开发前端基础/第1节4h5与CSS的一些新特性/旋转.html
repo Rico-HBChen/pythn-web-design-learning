@@ -4,6 +4,11 @@
 		<meta charset="utf-8">
 		<title></title>
 		<style type="text/css">
+			.container{
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
 			.container>div{
 				width: 100px;
 				height: 100px;
@@ -11,11 +16,10 @@
 				border: 1px saddlebrown solid;
 			}
 			.box:first-child{
-				transform: translateX(100px);
+				transform: rotateZ(45deg);
 			}
 			.box:nth-child(2){
-				transform: translateX(100px)
-				translateY(100px);
+				transform: translateY(100px) translateZ(60deg);
 			}
 		</style>
 	</head>
@@ -24,9 +28,6 @@
 			<div class="box">box1</div>
 			<div class="box">box2</div>
 			<div class="box">box3</div>
-			<div class="box">box4</div>
-			<div class="box">box5</div>
-			<div class="box">box6</div>
 		</div>
 	</body>
 </html>
