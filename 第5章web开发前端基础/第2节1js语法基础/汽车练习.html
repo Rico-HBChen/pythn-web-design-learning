@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Vehicle(){
+				
+			}
+			Vehicle.prototype.move = function(){
+				console.log("move speed:",this.speed)
+			}
+			
+			function Car(power){
+				Car.prototype.constructor.call(this)
+				this.wheel = 4
+				this.speed = 100
+			}
+			Car.prototype = new Vehicle()
+			var car = new Car()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function createUser(name,age,sex){
+			// 	var o = new Object()
+			// 	o.name = name
+			// 	o.age = age
+			// 	o.sex = sex
+			// 	o.toString = function(){
+			// 		return "我的名字" + o.name + "我的年龄" + o.age+"我的性别"+o.sex
+			// 	}
+			// 	return o				
+			// }
+			// wangsan = createUser("wangsan",18,"girl")
+			// console.log(wangsan)
+			//练习2 浅拷贝与深拷贝
+			// function copyObject(Object){
+			// 	var o = new Object()
+			// 	for (i in Object){
+			// 		if (typeof(Object[i]) == "object"){
+			// 			o[i] = copyObject(Object[i])
+			// 		}
+			// 		else{
+			// 			o[i] = object[i]
+			// 		}
+			// 		return o
+			// 	}
+			// }
+			// 练习4实现一个FIFO队列对象,只有两个方法put和get
+			// var queue = new Object()
+			// queue.data = []
+			// queue.put = function(){
+			// 	queue.data.push(val)
+			// 	}
+			// queue.get = function(){
+			// 	return queue.data.shift()
+			// 	}
+			//练习5按照name值排序
+			// array = [{"name":"luxp"},{"name":"wangsan"},
+			// {"name":"ls"},{"name":"ns"}]
+			// function compare(val1,val2){
+			// 	if(val1.name > val2.name){
+			// 		return true
+			// 	}
+			// 	else{
+			// 		return false
+			// 	}
+			// }
+			// sorted_array = array.sort(compare)
+			// 练习6使用filter，挑出5的倍数
+			// array = [1,3,5,8,10,15]
+			// newArray = array.filter(function(val){
+			// 	if (val%5==0){
+			// 		return true
+			// 	}
+			// })
+			//练习7筛选昂贵商品
+			array = [["good1",100,500],["good2",1300,500]]
+			function compare(pre,cur){
+				console.log("cur",cur,cur[0])
+				if (cur[1] > 1200){
+					return pre+cur[2]
+					}
+				else{
+					return pre
+				}
+			}
+		</script>
+	</body>
+</html>
